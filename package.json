@@ -1,0 +1,1 @@
+{"name":"docparity","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","test":"node --test tests/*.test.mjs && python -m unittest discover -s tests -p 'test_*.py'","schema":"node scripts/schema.mjs"},"dependencies":{"genlayer-js":"2.0.0","viem":"2.38.6"},"devDependencies":{"vite":"6.4.1"}}

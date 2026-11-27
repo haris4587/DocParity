@@ -1,0 +1,14 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {connectWallet,transactionState,submitOnce} from '../src/wallet.mjs';
+const address='0x'+'a'.repeat(40);
+test('missing wallet gives actionable error',async()=>assert.rejects(connectWallet(),/Studio/));
+test('correct network needs no switch',async()=>{const calls=[];assert.equal(await connectWallet({request:async x=>{calls.push(x.method);return x.method==='eth_requestAccounts'?[address]:'0xf22f'}}),address);assert(!calls.includes('wallet_switchEthereumChain'));});
+test('unknown chain adds and verifies Studionet',async()=>{let chain='0x1';let added=false;let switches=0;await connectWallet({request:async x=>{if(x.method==='eth_requestAccounts')return [address];if(x.method==='eth_chainId')return chain;if(x.method==='wallet_switchEthereumChain'){if(++switches===1)throw Object.assign(Error(),{code:4902});chain=x.params[0].chainId;}if(x.method==='wallet_addEthereumChain')added=true;}});assert(added);assert.equal(chain,'0xf22f');});
+test('wallet rejection propagates',async()=>assert.rejects(connectWallet({request:async()=>{throw Object.assign(Error('Rejected'),{code:4001})}}),/Rejected/));
+test('failed chain switch cannot sign',async()=>assert.rejects(connectWallet({request:async x=>x.method==='eth_requestAccounts'?[address]:'0x1'}),/Switch/));
+test('finality without execution evidence is not success',()=>assert.equal(transactionState({statusName:'FINALIZED'}).success,false));
+test('accepted is still pending',()=>assert.deepEqual(transactionState({statusName:'ACCEPTED'}),{status:'ACCEPTED',success:false,terminal:false}));
+test('finalized majority agreement and return succeeds',()=>assert(transactionState({statusName:'FINALIZED',result_name:'MAJORITY_AGREE',consensus_data:{leader_receipt:[{mode:'leader',execution_result:'SUCCESS'}]}}).success));
+test('finalized contract error is terminal failure',()=>assert.deepEqual(transactionState({statusName:'FINALIZED',result_name:'MAJORITY_AGREE',consensus_data:{leader_receipt:[{mode:'leader',execution_result:'ERROR'}]}}),{status:'FINALIZED',success:false,terminal:true}));
+test('write submitted once and hash preserved before polling',async()=>{let count=0,saved;const hash='0x'+'b'.repeat(64);assert.equal(await submitOnce({client:{writeContract:async args=>{count++;assert.equal(args.leaderOnly,false);return hash;}},address,functionName:'assess',args:['id'],onHash:h=>saved=h}),hash);assert.equal(saved,hash);assert.equal(count,1);});
+test('submission error never invents a hash',async()=>{let saved=false;await assert.rejects(submitOnce({client:{writeContract:async()=>{throw Error('rejected')}},address,functionName:'assess',args:['id'],onHash:()=>saved=true}));assert.equal(saved,false);});
