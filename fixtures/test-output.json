@@ -1,0 +1,23 @@
+{
+  "code_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+  "runs": [
+    {
+      "claim_id": "greeting",
+      "command": "python fixtures/cli.py --name Ada",
+      "exit_code": 0,
+      "output": "Hello, Ada!\n"
+    },
+    {
+      "claim_id": "uppercase",
+      "command": "python fixtures/cli.py --uppercase",
+      "exit_code": 2,
+      "output": "usage: cli.py [-h] [--name NAME]\ncli.py: error: unrecognized arguments: --uppercase\n"
+    },
+    {
+      "claim_id": "encryption",
+      "command": "python fixtures/cli.py --name Ada",
+      "exit_code": 0,
+      "output": "Hello, Ada!\n"
+    }
+  ]
+}
