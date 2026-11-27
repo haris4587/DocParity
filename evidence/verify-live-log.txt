@@ -1,0 +1,86 @@
+{
+  "verified_at": "2026-11-27T11:54:10.483Z",
+  "address": "0x058F4Fb06c954085B7e2f41A2614A81d00D82a16",
+  "source_matches": true,
+  "source_sha256": "783f52b647f32854ae3cf6345f081e160db810f149aece49a1be9de457a960e6",
+  "event_chain_valid": true,
+  "index": {
+    "events": 8,
+    "head": "e3edc4dbe94603ae22338e1184fd8db008cfda7cef72dd0bca4376e070626316",
+    "ids": [
+      "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+      "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a"
+    ],
+    "total": 2
+  },
+  "transactions": [
+    {
+      "action": "deploy",
+      "hash": "0xdfae0c0443b9c966bf60f3ed17507a0cbcb75cc47869a9bc7206955fc5400d4c",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "open_assessment",
+      "hash": "0x593da69ec4f09c9483542eda8ee462b58b9f8e45c18d5d507f951b70757ca9a0",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "submit_evidence",
+      "hash": "0xaccfa305189b4fea938151ab4255fcea292d95c6b6a97cef300a01ad93096e6f",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "assess-1",
+      "hash": "0xe9adab3c8a9e9e879873e31352ea9465c374fa0f95ec72387d9854faf6418553",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "challenge",
+      "hash": "0x00c43690b9c1abaa466cdade0c3350c8c792d3baeccde53f059646c7ece788a5",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "open-adverse",
+      "hash": "0x91014de56aa8e5cdee26d102c4a5427aa556991d1ebed1e96cd2e9ec6c56f222",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "submit-adverse",
+      "hash": "0xd7cc6a278f5c301cc2c86939fbfd62c048475c1a2f5b1f6b56bb242f531d66dd",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "reassess-2",
+      "hash": "0xdcf60dbadc81d1ad0becfba87759db83d4f74d7a8535f004d62e2a43c15f0ff0",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    },
+    {
+      "action": "assess-adverse",
+      "hash": "0x4a433aa63bc7e29290f5ebbf260b66b6ac37045792bbdfa768235046e07e9d6b",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "leader_only": false
+    }
+  ],
+  "outcomes": {
+    "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37": "ACCURATE",
+    "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a": "MISLEADING"
+  }
+}
+

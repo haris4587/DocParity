@@ -1,0 +1,19 @@
+{
+  "repository": "haris4587/DocParity",
+  "docs_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+  "code_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+  "tests_commit": "afc01cc71c697e6bbfd2b1739dba56e69a72ba54",
+  "title": "Obsolete uppercase flag",
+  "claims": [
+    {
+      "id": "uppercase",
+      "statement": "The --uppercase parameter prints the greeting in uppercase.",
+      "command": "python fixtures/cli.py --uppercase",
+      "parameters": [
+        "--uppercase"
+      ],
+      "expected_exit": 0,
+      "expected_output": "HELLO, DEVELOPER!"
+    }
+  ]
+}

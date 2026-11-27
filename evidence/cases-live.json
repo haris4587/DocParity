@@ -1,0 +1,233 @@
+{
+  "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37": {
+    "challenge": "Verify that --name changes only the greeting recipient and that this scoped verdict does not validate the unsupported uppercase or encryption claims elsewhere in the same documentation.",
+    "disputed": false,
+    "effective_verdict": "ACCURATE",
+    "manifest": {
+      "files": [
+        {
+          "bytes": 597,
+          "role": "docs",
+          "sha256": "ccb37792fa79d60f1fa13abd628fb45caded6383bde660069b0ebe89f2954de9",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/usage.md"
+        },
+        {
+          "bytes": 229,
+          "role": "source",
+          "sha256": "5e60b93f175450d53e982948e29aa117d3b58e8bf62ee3529e6283e79b1bed2e",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/cli.py"
+        },
+        {
+          "bytes": 610,
+          "role": "tests",
+          "sha256": "fb69c422ab81cc1a56628466c33dd5dfc7ecb98aa56068cadb3d2b24c37d35c8",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/afc01cc71c697e6bbfd2b1739dba56e69a72ba54/fixtures/test-output.json"
+        }
+      ]
+    },
+    "owner": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "receipt_hash": "e4d59c7a31ef210c39e95535e984829dbf1f6c32319a4fe7c4390aca3ba0e7b5",
+    "rounds": 2,
+    "scope": {
+      "claims": [
+        {
+          "command": "python fixtures/cli.py --name Ada",
+          "expected_exit": 0,
+          "expected_output": "Hello, Ada!",
+          "id": "greeting",
+          "parameters": [
+            "--name"
+          ],
+          "statement": "The --name parameter selects the person to greet."
+        }
+      ],
+      "code_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+      "docs_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+      "repository": "haris4587/DocParity",
+      "tests_commit": "afc01cc71c697e6bbfd2b1739dba56e69a72ba54",
+      "title": "Greeting parameter behavior"
+    },
+    "scope_hash": "8aa0319199cc8d0fc45ce82770edbc25dd60effd1c4bddae3956f06443e63d21",
+    "verdict": "ACCURATE",
+    "receipts": [
+      {
+        "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+        "challenge": "",
+        "hash": "68efb1e8a41b035f5441f852c0de45aa8f0ec70b7c71e2b70bf01604c8898d8f",
+        "manifest_hash": "eb629ec926b46f24563a6b2f7251b7e6a531c7229dd447423168a7609eed6d4e",
+        "previous_receipt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "result": {
+          "checks": [
+            {
+              "documented": true,
+              "exit_matches": true,
+              "id": "greeting",
+              "output_matches": true,
+              "parameters_present": true,
+              "test_covered": true
+            }
+          ],
+          "claims": [
+            {
+              "doc_quote": "The --name parameter selects the person to greet.\n\n    python fixtures/cli.py --name Ada\n\nExpected exit code: 0\nExpected output: Hello, Ada!",
+              "id": "greeting",
+              "reason": "Within the supplied claim scope, --name supplies the name inserted into the greeting. The committed report records the documented command exiting with code 0 and printing Hello, Ada! followed by a newline, consistent with the implementation. This report is a repository assertion, not independently authenticated execution.",
+              "source_quote": "p.add_argument('--name', default='developer')\na = p.parse_args()\nprint('Hello, ' + a.name + '!')",
+              "test_quote": "\"claim_id\": \"greeting\",\n      \"command\": \"python fixtures/cli.py --name Ada\",\n      \"exit_code\": 0,\n      \"output\": \"Hello, Ada!\\n\"",
+              "verdict": "ACCURATE"
+            }
+          ],
+          "reason": "Scoped repository evidence; test outputs are submitter assertions",
+          "verdict": "ACCURATE"
+        },
+        "round": 1,
+        "scope_hash": "8aa0319199cc8d0fc45ce82770edbc25dd60effd1c4bddae3956f06443e63d21"
+      },
+      {
+        "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+        "challenge": "Verify that --name changes only the greeting recipient and that this scoped verdict does not validate the unsupported uppercase or encryption claims elsewhere in the same documentation.",
+        "hash": "e4d59c7a31ef210c39e95535e984829dbf1f6c32319a4fe7c4390aca3ba0e7b5",
+        "manifest_hash": "eb629ec926b46f24563a6b2f7251b7e6a531c7229dd447423168a7609eed6d4e",
+        "previous_receipt": "68efb1e8a41b035f5441f852c0de45aa8f0ec70b7c71e2b70bf01604c8898d8f",
+        "result": {
+          "checks": [
+            {
+              "documented": true,
+              "exit_matches": true,
+              "id": "greeting",
+              "output_matches": true,
+              "parameters_present": true,
+              "test_covered": true
+            }
+          ],
+          "claims": [
+            {
+              "doc_quote": "The --name parameter selects the person to greet.",
+              "id": "greeting",
+              "reason": "The implementation substitutes --name only into the recipient position of the fixed greeting, defaulting to developer. The committed report records the documented Ada invocation exiting 0 and printing Hello, Ada! with a trailing newline. This report is a repository assertion, not independently authenticated execution. This verdict covers only the scoped greeting claim; it does not validate the uppercase or encryption claims elsewhere in the documentation.",
+              "source_quote": "p.add_argument('--name', default='developer')\na = p.parse_args()\nprint('Hello, ' + a.name + '!')",
+              "test_quote": "\"claim_id\": \"greeting\",\n      \"command\": \"python fixtures/cli.py --name Ada\",\n      \"exit_code\": 0,\n      \"output\": \"Hello, Ada!\\n\"",
+              "verdict": "ACCURATE"
+            }
+          ],
+          "reason": "Scoped repository evidence; test outputs are submitter assertions",
+          "verdict": "ACCURATE"
+        },
+        "round": 2,
+        "scope_hash": "8aa0319199cc8d0fc45ce82770edbc25dd60effd1c4bddae3956f06443e63d21"
+      }
+    ]
+  },
+  "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a": {
+    "challenge": "",
+    "disputed": false,
+    "effective_verdict": "MISLEADING",
+    "manifest": {
+      "files": [
+        {
+          "bytes": 597,
+          "role": "docs",
+          "sha256": "ccb37792fa79d60f1fa13abd628fb45caded6383bde660069b0ebe89f2954de9",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/usage.md"
+        },
+        {
+          "bytes": 229,
+          "role": "source",
+          "sha256": "5e60b93f175450d53e982948e29aa117d3b58e8bf62ee3529e6283e79b1bed2e",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/cli.py"
+        },
+        {
+          "bytes": 610,
+          "role": "tests",
+          "sha256": "fb69c422ab81cc1a56628466c33dd5dfc7ecb98aa56068cadb3d2b24c37d35c8",
+          "url": "https://raw.githubusercontent.com/haris4587/DocParity/afc01cc71c697e6bbfd2b1739dba56e69a72ba54/fixtures/test-output.json"
+        }
+      ]
+    },
+    "owner": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "receipt_hash": "4634f1e0c485881ca1a75086cc55f92cc08fccee30895dcccedef7c8710848ec",
+    "rounds": 1,
+    "scope": {
+      "claims": [
+        {
+          "command": "python fixtures/cli.py --uppercase",
+          "expected_exit": 0,
+          "expected_output": "HELLO, DEVELOPER!",
+          "id": "uppercase",
+          "parameters": [
+            "--uppercase"
+          ],
+          "statement": "The --uppercase parameter prints the greeting in uppercase."
+        },
+        {
+          "command": "python fixtures/cli.py --name Ada",
+          "expected_exit": 0,
+          "expected_output": "Hello, Ada!",
+          "id": "encryption",
+          "parameters": [
+            "--name"
+          ],
+          "statement": "The greeting command encrypts the output before printing it."
+        }
+      ],
+      "code_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+      "docs_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+      "repository": "haris4587/DocParity",
+      "tests_commit": "afc01cc71c697e6bbfd2b1739dba56e69a72ba54",
+      "title": "Unsupported CLI instructions"
+    },
+    "scope_hash": "6d3516b3730b6fe7fd6dc0adaa4189728ed8bc871ac23ab31654b31360ac633c",
+    "verdict": "MISLEADING",
+    "receipts": [
+      {
+        "case_id": "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a",
+        "challenge": "",
+        "hash": "4634f1e0c485881ca1a75086cc55f92cc08fccee30895dcccedef7c8710848ec",
+        "manifest_hash": "eb629ec926b46f24563a6b2f7251b7e6a531c7229dd447423168a7609eed6d4e",
+        "previous_receipt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "result": {
+          "checks": [
+            {
+              "documented": true,
+              "exit_matches": false,
+              "id": "uppercase",
+              "output_matches": false,
+              "parameters_present": false,
+              "test_covered": true
+            },
+            {
+              "documented": true,
+              "exit_matches": true,
+              "id": "encryption",
+              "output_matches": true,
+              "parameters_present": true,
+              "test_covered": true
+            }
+          ],
+          "claims": [
+            {
+              "doc_quote": "The --uppercase parameter prints the greeting in uppercase.",
+              "id": "uppercase",
+              "reason": "The --uppercase parameter is documented but not implemented in the source code, and the test report confirms it is an unrecognized argument resulting in exit code 2.",
+              "source_quote": "p.add_argument('--name', default='developer')",
+              "test_quote": "cli.py: error: unrecognized arguments: --uppercase",
+              "verdict": "OUTDATED"
+            },
+            {
+              "doc_quote": "The greeting command encrypts the output before printing it.",
+              "id": "encryption",
+              "reason": "The documentation claims the output is encrypted, but the source code performs a simple string concatenation and the test output shows plain text.",
+              "source_quote": "print('Hello, ' + a.name + '!')",
+              "test_quote": "\"output\": \"Hello, Ada!\\n\"",
+              "verdict": "MISLEADING"
+            }
+          ],
+          "reason": "Scoped repository evidence; test outputs are submitter assertions",
+          "verdict": "MISLEADING"
+        },
+        "round": 1,
+        "scope_hash": "6d3516b3730b6fe7fd6dc0adaa4189728ed8bc871ac23ab31654b31360ac633c"
+      }
+    ]
+  }
+}

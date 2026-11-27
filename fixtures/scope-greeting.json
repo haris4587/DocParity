@@ -1,0 +1,19 @@
+{
+  "repository": "haris4587/DocParity",
+  "docs_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+  "code_commit": "c268f535f168db8712b1cb5825bb611c6bed0a44",
+  "tests_commit": "afc01cc71c697e6bbfd2b1739dba56e69a72ba54",
+  "title": "Greeting parameter behavior",
+  "claims": [
+    {
+      "id": "greeting",
+      "statement": "The --name parameter selects the person to greet.",
+      "command": "python fixtures/cli.py --name Ada",
+      "parameters": [
+        "--name"
+      ],
+      "expected_exit": 0,
+      "expected_output": "Hello, Ada!"
+    }
+  ]
+}

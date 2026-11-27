@@ -1,0 +1,240 @@
+{
+  "hash": "0x06ae151e0d44982b9b3657e0574d3cb209bf4b47021e938b56f72a84db720371",
+  "statusName": "UNDETERMINED",
+  "result_name": "MAJORITY_DISAGREE",
+  "leader_only": false,
+  "consensus_data": {
+    "votes": {
+      "0x6DC61b906F74F44612c5545b0b79486133B3556d": "idle",
+      "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "disagree",
+      "0x88E148Da14d45c5a5DD2DB25E776eBCBCe0Df539": "disagree",
+      "0xe358f855C96d8E7243836cf986eb037175B9467e": "idle",
+      "0xee46B9Dc4c860149B1d140840284e5374854e746": "disagree"
+    },
+    "leader_receipt": [
+      {
+        "mode": "leader",
+        "vote": null,
+        "execution_result": "ERROR",
+        "nondet_disagree": null,
+        "model": "policy:prd-grok-4.3",
+        "eq_outputs": {
+          "0": {
+            "raw": "AXVuZ3JvdW5kZWQgZGVjaXNpb24=",
+            "status": "rollback",
+            "payload": "ungrounded decision"
+          }
+        },
+        "result": {
+          "raw": "AXVuZ3JvdW5kZWQgZGVjaXNpb24=",
+          "status": "rollback",
+          "payload": "ungrounded decision"
+        },
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null,
+          "data_fees_consumed": {
+            "message_fee": 0,
+            "nondet_outputs": 0,
+            "execution_data_gas": 0,
+            "submitted_messages": 0,
+            "submitted_messages_count": 0
+          },
+          "data_fees_remaining": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          },
+          "fee_policy_snapshot": {
+            "intrinsic_gas": 21000,
+            "extra_exec_gas": 210000,
+            "gen_per_time_unit": 1,
+            "receipt_gas_price": 250000000,
+            "storage_unit_price": 250000000,
+            "bootloader_overhead": 60000,
+            "max_messages_per_tx": 0,
+            "gas_per_changed_slot": 1000,
+            "max_commit_timeunits": 600,
+            "max_eq_outputs_bytes": 0,
+            "min_commit_timeunits": 30,
+            "calldata_gas_per_byte": 16,
+            "max_propose_timeunits": 600,
+            "min_propose_timeunits": 30,
+            "receipt_wrapper_bytes": 1024,
+            "time_unit_overlay_bps": 1500,
+            "max_allocated_messages": 20,
+            "min_external_gas_limit": 0,
+            "fixed_message_reveal_gas": 100000,
+            "fixed_propose_receipt_gas": 210000,
+            "max_allocation_tree_depth": 5,
+            "default_external_gas_limit": 500000,
+            "max_submitted_messages_bytes": 0,
+            "enforce_v06_submission_config": 1
+          },
+          "data_fee_bucket_totals": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          }
+        }
+      },
+      {
+        "mode": "validator",
+        "vote": "disagree",
+        "execution_result": "ERROR",
+        "nondet_disagree": 0,
+        "model": "policy:prd-grok-4.3",
+        "result": {
+          "raw": "AXVuZ3JvdW5kZWQgZGVjaXNpb24=",
+          "status": "rollback",
+          "payload": "ungrounded decision"
+        },
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null,
+          "data_fees_consumed": {
+            "message_fee": 0,
+            "nondet_outputs": 0,
+            "execution_data_gas": 0,
+            "submitted_messages": 0,
+            "submitted_messages_count": 0
+          },
+          "data_fees_remaining": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          },
+          "data_fee_bucket_totals": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          }
+        }
+      }
+    ],
+    "validators": [
+      {
+        "mode": "validator",
+        "vote": "disagree",
+        "execution_result": "ERROR",
+        "nondet_disagree": 0,
+        "model": "policy:prd-gpt-oss-120b",
+        "result": "AXVuZ3JvdW5kZWQgZGVjaXNpb24=",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null,
+          "data_fees_consumed": {
+            "message_fee": 0,
+            "nondet_outputs": 0,
+            "execution_data_gas": 0,
+            "submitted_messages": 0,
+            "submitted_messages_count": 0
+          },
+          "data_fees_remaining": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          },
+          "data_fee_bucket_totals": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          }
+        }
+      },
+      {
+        "mode": "validator",
+        "vote": "idle",
+        "execution_result": "ERROR",
+        "nondet_disagree": null,
+        "result": "AmlkbGU=",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        }
+      },
+      {
+        "mode": "validator",
+        "vote": "disagree",
+        "execution_result": "ERROR",
+        "nondet_disagree": 0,
+        "model": "policy:prd-gemini-3.5-flash-lite",
+        "result": "AXVuZ3JvdW5kZWQgZGVjaXNpb24=",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null,
+          "data_fees_consumed": {
+            "message_fee": 0,
+            "nondet_outputs": 0,
+            "execution_data_gas": 0,
+            "submitted_messages": 0,
+            "submitted_messages_count": 0
+          },
+          "data_fees_remaining": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          },
+          "data_fee_bucket_totals": {
+            "message_fee": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "nondet_outputs": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "execution_data_gas": 99729600000000,
+            "submitted_messages": "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+            "submitted_messages_count": 20
+          }
+        }
+      },
+      {
+        "mode": "validator",
+        "vote": "idle",
+        "execution_result": "ERROR",
+        "nondet_disagree": null,
+        "result": "AmlkbGU=",
+        "genvm_result": {
+          "stderr": "Validator execution cancelled after quorum",
+          "stdout": "",
+          "raw_error": {
+            "fatal": false,
+            "causes": [
+              "VALIDATOR_QUORUM_REACHED"
+            ]
+          },
+          "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "action": "OPENED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+    "hash": "3cf0bbc5b99f048b09085fd77be02cad0df53b79600d64ff8a98b0b8f4f0a710",
+    "payload": {
+      "scope_hash": "8aa0319199cc8d0fc45ce82770edbc25dd60effd1c4bddae3956f06443e63d21"
+    },
+    "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+    "sequence": 1
+  },
+  {
+    "action": "EVIDENCE_LOCKED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+    "hash": "05e289b003a18bc4c12bd0bb1abdb30aada323341aae2dfe03d08c6ce2d0f14b",
+    "payload": {
+      "manifest_hash": "eb629ec926b46f24563a6b2f7251b7e6a531c7229dd447423168a7609eed6d4e"
+    },
+    "previous": "3cf0bbc5b99f048b09085fd77be02cad0df53b79600d64ff8a98b0b8f4f0a710",
+    "sequence": 2
+  },
+  {
+    "action": "ASSESSED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+    "hash": "b8603dabee6a2461ef54359c8f3440d57a4dce2249a9302839c736f2cb642543",
+    "payload": {
+      "receipt_hash": "68efb1e8a41b035f5441f852c0de45aa8f0ec70b7c71e2b70bf01604c8898d8f",
+      "round": 1,
+      "verdict": "ACCURATE"
+    },
+    "previous": "05e289b003a18bc4c12bd0bb1abdb30aada323341aae2dfe03d08c6ce2d0f14b",
+    "sequence": 3
+  },
+  {
+    "action": "CHALLENGED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+    "hash": "33fd9c3531dc3c3334d4e87f1699f1d025b02c13f170bcd8565f526e635d6dc8",
+    "payload": {
+      "reason": "Verify that --name changes only the greeting recipient and that this scoped verdict does not validate the unsupported uppercase or encryption claims elsewhere in the same documentation."
+    },
+    "previous": "b8603dabee6a2461ef54359c8f3440d57a4dce2249a9302839c736f2cb642543",
+    "sequence": 4
+  },
+  {
+    "action": "OPENED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a",
+    "hash": "f6ef7ac962b0d34b6d33fd13e235b7c913cbc232339b1543b1f09d206ccbf576",
+    "payload": {
+      "scope_hash": "6d3516b3730b6fe7fd6dc0adaa4189728ed8bc871ac23ab31654b31360ac633c"
+    },
+    "previous": "33fd9c3531dc3c3334d4e87f1699f1d025b02c13f170bcd8565f526e635d6dc8",
+    "sequence": 5
+  },
+  {
+    "action": "EVIDENCE_LOCKED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a",
+    "hash": "c9bcd87869d2ee9e78001de9e4880f6b5e0eae3c774fbe0c948fbe45de785753",
+    "payload": {
+      "manifest_hash": "eb629ec926b46f24563a6b2f7251b7e6a531c7229dd447423168a7609eed6d4e"
+    },
+    "previous": "f6ef7ac962b0d34b6d33fd13e235b7c913cbc232339b1543b1f09d206ccbf576",
+    "sequence": 6
+  },
+  {
+    "action": "ASSESSED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "7dcbc56771bee69965d78229211d60bc8e7d7da867fb38f7c92f57545c88cf37",
+    "hash": "999ab786ff34b65dc65d27b53cc9b2c8a072be37703ca955dfad2cff98c55fcb",
+    "payload": {
+      "receipt_hash": "e4d59c7a31ef210c39e95535e984829dbf1f6c32319a4fe7c4390aca3ba0e7b5",
+      "round": 2,
+      "verdict": "ACCURATE"
+    },
+    "previous": "c9bcd87869d2ee9e78001de9e4880f6b5e0eae3c774fbe0c948fbe45de785753",
+    "sequence": 7
+  },
+  {
+    "action": "ASSESSED",
+    "actor": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+    "case_id": "9e8ece0eac293d8ba88fbd724bede08723f10b6deb6102988c38923afc3f425a",
+    "hash": "e3edc4dbe94603ae22338e1184fd8db008cfda7cef72dd0bca4376e070626316",
+    "payload": {
+      "receipt_hash": "4634f1e0c485881ca1a75086cc55f92cc08fccee30895dcccedef7c8710848ec",
+      "round": 1,
+      "verdict": "MISLEADING"
+    },
+    "previous": "999ab786ff34b65dc65d27b53cc9b2c8a072be37703ca955dfad2cff98c55fcb",
+    "sequence": 8
+  }
+]

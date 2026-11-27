@@ -1,0 +1,63 @@
+{
+  "hash": "0x91014de56aa8e5cdee26d102c4a5427aa556991d1ebed1e96cd2e9ec6c56f222",
+  "from_address": "0xcD72fA5B6A496d84B4A10bCFF31D3B7c12346a9e",
+  "to_address": "0x058F4Fb06c954085B7e2f41A2614A81d00D82a16",
+  "statusName": "FINALIZED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "txExecutionResultName": "FINISHED_WITH_RETURN",
+  "consensus_data": {
+    "votes": {
+      "0x21e4F7ba6Ec0fbf70C019fbc0F9A797c3ed1F969": "idle",
+      "0x5744305308D62592B7De585e1999c4Ea51E03C29": "agree",
+      "0x62718FbDf0509A398aA525C152D60c1F7A9d33D3": "idle",
+      "0x6fe9DE3d0adc76D6416A13CD8107aaE49A3CF98F": "agree",
+      "0x725Ab89db6A9DD886Ba71Bc5E63a01070C325bE3": "agree"
+    },
+    "leader_receipt": [
+      {
+        "mode": "leader",
+        "vote": null,
+        "execution_result": "SUCCESS",
+        "nondet_disagree": null,
+        "model": "policy:prd-kimi-k2.7-code",
+        "eq_outputs": {}
+      },
+      {
+        "mode": "validator",
+        "vote": "idle",
+        "execution_result": "ERROR",
+        "nondet_disagree": null
+      }
+    ],
+    "validators": [
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "SUCCESS",
+        "nondet_disagree": null,
+        "model": "policy:prd-deepseek-v4.1-flash-1017"
+      },
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "SUCCESS",
+        "nondet_disagree": null,
+        "model": "policy:prd-grok-4.3"
+      },
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "SUCCESS",
+        "nondet_disagree": null,
+        "model": "policy:prd-gemma-4-31b-it"
+      },
+      {
+        "mode": "validator",
+        "vote": "idle",
+        "execution_result": "ERROR",
+        "nondet_disagree": null
+      }
+    ]
+  }
+}

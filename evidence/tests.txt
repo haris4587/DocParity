@@ -3,17 +3,17 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 > docparity@1.0.0 test
 > node --test tests/*.test.mjs && python -m unittest discover -s tests -p 'test_*.py'
 
-✔ missing wallet gives actionable error (1.48312ms)
-✔ correct network needs no switch (0.36527ms)
-✔ unknown chain adds and verifies Studionet (0.362155ms)
-✔ wallet rejection propagates (0.280281ms)
-✔ failed chain switch cannot sign (0.261523ms)
-✔ finality without execution evidence is not success (0.255955ms)
-✔ accepted is still pending (0.810148ms)
-✔ finalized majority agreement and return succeeds (0.170977ms)
-✔ finalized contract error is terminal failure (0.17351ms)
-✔ write submitted once and hash preserved before polling (0.403877ms)
-✔ submission error never invents a hash (0.295684ms)
+✔ missing wallet gives actionable error (1.541366ms)
+✔ correct network needs no switch (0.348774ms)
+✔ unknown chain adds and verifies Studionet (0.386871ms)
+✔ wallet rejection propagates (0.327973ms)
+✔ failed chain switch cannot sign (0.305209ms)
+✔ finality without execution evidence is not success (0.285128ms)
+✔ accepted is still pending (0.960724ms)
+✔ finalized majority agreement and return succeeds (0.186681ms)
+✔ finalized contract error is terminal failure (0.214362ms)
+✔ write submitted once and hash preserved before polling (0.524318ms)
+✔ submission error never invents a hash (0.415445ms)
 ℹ tests 11
 ℹ suites 0
 ℹ pass 11
@@ -21,7 +21,7 @@ npm warn Unknown env config "http-proxy". This will stop working in the next maj
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 134.388128
+ℹ duration_ms 155.795889
 .........................
 ----------------------------------------------------------------------
 Ran 25 tests in 0.005s

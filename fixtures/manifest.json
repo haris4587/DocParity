@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "role": "docs",
+      "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/usage.md",
+      "sha256": "ccb37792fa79d60f1fa13abd628fb45caded6383bde660069b0ebe89f2954de9",
+      "bytes": 597
+    },
+    {
+      "role": "source",
+      "url": "https://raw.githubusercontent.com/haris4587/DocParity/c268f535f168db8712b1cb5825bb611c6bed0a44/fixtures/cli.py",
+      "sha256": "5e60b93f175450d53e982948e29aa117d3b58e8bf62ee3529e6283e79b1bed2e",
+      "bytes": 229
+    },
+    {
+      "role": "tests",
+      "url": "https://raw.githubusercontent.com/haris4587/DocParity/afc01cc71c697e6bbfd2b1739dba56e69a72ba54/fixtures/test-output.json",
+      "sha256": "fb69c422ab81cc1a56628466c33dd5dfc7ecb98aa56068cadb3d2b24c37d35c8",
+      "bytes": 610
+    }
+  ]
+}
